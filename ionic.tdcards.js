@@ -281,8 +281,7 @@
         onSnapBack: '&',
         onDestroy: '&'
       },
-      compile: function(element, attr) {
-        return function($scope, $element, $attr, swipeCards) {
+      link: function($scope, $element, $attr, swipeCards) {
           var el = $element[0];
           var leftText = el.querySelector('.no-text');
           var rightText = el.querySelector('.yes-text');
@@ -381,7 +380,7 @@
                 return el.style.transform = el.style.webkitTransform = 'translate3d(' + x + 'px,0,0)';
               });
               */
-            },
+            }
           });
           $scope.$parent.swipeCard = swipeableCard;
 
